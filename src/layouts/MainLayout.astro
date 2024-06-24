@@ -1,11 +1,13 @@
 ---
 import MainHead from "./MainHead.astro";
+import Nav from "../components/nav.astro";
 const { title, seoTitle, seoDesc } = Astro.props;
 ---
 
 <html>
     <MainHead title={ title } seoTitle={ seoTitle } seoDesc={ seoDesc} />
     <body>
+        <Nav />
         <slot />
         <style>
             body {
