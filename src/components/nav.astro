@@ -1,3 +1,71 @@
 ---
+import Container from "./container.astro";
+import Link from "./ui/link.astro";
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 
+const menuitems = [
+    {
+        title: "Features",
+        path: "#",
+        children: [
+            { title: "Action", path: "/" },
+            { title: "Another action", path: "#" },
+            { title: "Dropdown Submenu", path: "#" },
+            { title: "404 Page", path: "/404" },
+        ],
+    },
+    {
+        title: "About Us",
+        path: "/about",
+    },
+    {
+        title: "Officers",
+        path: "/board",
+    },
+    {
+        title: "Sponsor",
+        path: "/sponsor",
+    },
+];
 ---
+
+<Container>
+    <header class="flex flex-col lg:flex-row justify-between items-center my-5">
+        <Astronav>
+            <div class="flex w-full lg:w-auto items-center justify-between">
+                <a href="/" class="text-lg"
+                    ><span class="font-bold text-slate-800">Oregon State</span
+                    ><span class="text-slate-500">NSBE</span>
+                </a>
+                <div class="block lg:hidden">
+                    <MenuIcon class="w-4 h-4 text-gray-800" />
+                </div>
+            </div>
+            <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+                <ul class="flex lg:flex-row lg:gap-4">
+                    {
+                        menuitems.map((item, index) => (
+                            <>
+                                {!item.children && (
+                                    <li>
+                                        <a
+                                            href={item.path}
+                                            class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900"
+                                        >
+                                            <span> {item.title}</span>
+                                        </a>
+                                    </li>
+                                )}
+                            </>
+                        ))
+                    }
+                    <div>
+                        <div class="hidden lg:flex items-center gap-4">
+                            <Link href="/contact" size="md">Contact Us</Link>
+                        </div>
+                    </div>
+                </ul>
+            </MenuItems>
+        </Astronav>
+    </header>
+</Container>
