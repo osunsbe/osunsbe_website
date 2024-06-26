@@ -1,12 +1,19 @@
 ---
+import Container from "../components/container.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import ClubName from "../components/clubName.astro";
+import Spotlight from "../components/studentSpotlight.astro"
+import UpcomingEvents from "../components/upcomingEvents.astro"
 ---
-<!-- test comment -->
+
 <MainLayout
   title="Oregon State NSBE"
   seoTitle="Oregon State NSBE"
   seoDesc="Oregon State University National Society of Black Engineers."
 >
-<h1>Home Page</h1>
-
+  <Container>
+    <ClubName />
+    <Spotlight />
+    <UpcomingEvents />
+  </Container>
 </MainLayout>

@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import FRCPhoto from "../assets/otherImgs/frc_stairs.JPG"
+---
+
+<main
+  class="grid lg:grid-cols-1 place-items-center pt-16 pb-8 md:pt-12 md:pb-24 text-center">
+  <div>
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      National Society Of Black Engineers
+      <br>
+      <span class="text-orange-500">Oregon State University</span>
+    </h1>
+  </div>
+  <div>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl lg:tracking-tight xl:tracking-tighter">
+      
+    </p>
+  </div>
+  <div class="p-16">
+    <Image
+      src={FRCPhoto}
+      alt="Group Photo FRC 2023"
+      loading="lazy"
+      width="800"
+      height="3000"
+    />
+  </div>
+</main>
