@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import FRCPhoto from "../../assets/otherImgs/frc_stairs.JPG";
+import Doug from "../../assets/otherImgs/douglas.jpg";
 ---
 
 <main
@@ -18,13 +18,26 @@ import FRCPhoto from "../../assets/otherImgs/frc_stairs.JPG";
       
     </p>
   </div>
-  <div class="p-16">
+  <div class="container mt-16">
     <Image
-      src={FRCPhoto}
+      src={Doug}
       alt="Group Photo FRC 2023"
       loading="lazy"
-      width="800"
-      height="3000"
+      class="responsive-image"
     />
   </div>
 </main>
+
+<style>
+  .container {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .responsive-image {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensures image behaves correctly */
+    margin: 0 auto; /* Optional: Center the image horizontally */
+  }
+</style>
