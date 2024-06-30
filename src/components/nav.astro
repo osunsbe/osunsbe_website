@@ -2,6 +2,8 @@
 import Container from "./container.astro";
 import Link from "./ui/link.astro";
 import { Astronav, MenuItems, MenuIcon, StickyHeader } from "astro-navbar";
+import Logo from "../assets/otherImgs/logo.svg";
+import Image from "astro/components/Image.astro";
 
 const menuitems = [
     {
@@ -14,7 +16,7 @@ const menuitems = [
     },
     {
         title: "Events",
-        path: "/events"
+        path: "/events",
     },
     {
         title: "Sponsor",
@@ -33,11 +35,13 @@ const menuitems = [
         <header class="flex flex-col lg:flex-row justify-between items-center">
             <Astronav>
                 <div class="flex w-full lg:w-auto items-center justify-between">
-                    <a href="/" class="text-lg">
-                        <span class="font-bold text-slate-800"
-                            >Oregon State</span
-                        >
-                        <span class="text-slate-500">NSBE</span>
+                    <a href="/" class="">
+                        <Image
+                            src={Logo}
+                            alt="Oregon State NSBE"
+                            loading="lazy"
+                            width={250}
+                        />
                     </a>
                     <div class="block lg:hidden">
                         <MenuIcon class="w-4 h-4 text-gray-800" />
