@@ -2,10 +2,175 @@
 import { Image } from "astro:assets";
 import FRC from "../../assets/otherImgs/frc_stairs.jpg";
 import nationals from "../../assets/otherImgs/nationals_group.jpeg";
+import Iman from "../../assets/memberSpotlight/iman.jpg";
+import Dougie_fresh from "../../assets/otherImgs/dougFace.jpg";
 ---
 
 <div class="mt-16 md:mt-0">
     <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight text-center">
         Member Spotlight
     </h2>
+</div>
+<div class="grid md:grid-cols-4 lg:grid-cols-4 place-items-center mt-8 gap-8">
+    <div
+        class="min-w-min bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+    >
+        <Image src={Iman} alt="Fall Regional Conference" class="rounded-t-lg" />
+        <div class="p-5">
+            <a href="#">
+                <h5
+                    class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                    Iman Stephenson
+                </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Reciever of the College of Engineering Student Success
+                Scholarship. Speaks about her passion for Nuclear Engineering
+                and her roles and achievements in the OSU Community.
+            </p>
+            <a
+                href="https://engineering.oregonstate.edu/all-stories/graduating-students-career-goal-safe-abundant-nuclear-energy"
+                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+                Read more
+                <svg
+                    class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                >
+                    <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div
+        class="min-w-min bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+    >
+        <Image
+            src={nationals}
+            alt="Fall Regional Conference"
+            class="rounded-t-lg"
+        />
+        <div class="p-5">
+            <a
+                href="https://engineering.oregonstate.edu/EECS/MyEECS/cybercorps-scholarship-service"
+            >
+                <h5
+                    class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                    Ahman Raines
+                </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Here are the biggest enterprise technology acquisitions of 2021
+                so far, in reverse chronological order.
+            </p>
+            <a
+                href="#"
+                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+                Read more
+                <svg
+                    class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                >
+                    <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div
+        class="min-w-min bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+    >
+        <Image src={FRC} alt="Fall Regional Conference" class="rounded-t-lg" />
+        <div class="p-5">
+            <a href="#">
+                <h5
+                    class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                    Graduating Seniors
+                </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Congratulations to Our Graduating Seniors, Class of 2024! Want
+                to know more about our accomplished alumni and the next steps in
+                there lives?
+            </p>
+            <a
+                href="/alumni"
+                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+                Read more
+                <svg
+                    class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                >
+                    <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
+    <div
+        class="min-w-min bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 "
+    >
+        <Image src={Dougie_fresh} alt="Douglas" class="rounded-t-lg" />
+        <div class="p-5">
+            <a href="#">
+                <h5
+                    class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+                >
+                    Douglas Crocker
+                </h5>
+            </a>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                Douglas was honored with the prestigious role of Assistant
+                Treasurer for the Regional Executive Board, recognizing his
+                exceptional skills and dedication.
+            </p>
+            <a
+                href="https://www.nsbe.org/Collegiate/Regions/Region6/About/Region6-Executive-Board"
+                class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            >
+                Read more
+                <svg
+                    class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 14 10"
+                >
+                    <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+                </svg>
+            </a>
+        </div>
+    </div>
 </div>
