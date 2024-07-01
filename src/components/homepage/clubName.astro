@@ -1,0 +1,43 @@
+---
+import { Image } from "astro:assets";
+import Doug from "../../assets/otherImgs/douglas.jpg";
+---
+
+<main
+  class="grid lg:grid-cols-1 place-items-center pt-16 pb-8 md:pt-12 md:pb-24 text-center">
+  <div>
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      National Society Of Black Engineers
+      <br>
+      <span class="text-orange-500">Oregon State University</span>
+    </h1>
+  </div>
+  <div>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl lg:tracking-tight xl:tracking-tighter">
+      
+    </p>
+  </div>
+  <div class="container mt-16">
+    <Image
+      src={Doug}
+      alt="Group Photo FRC 2023"
+      loading="lazy"
+      class="responsive-image"
+    />
+  </div>
+</main>
+
+<style>
+  .container {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .responsive-image {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensures image behaves correctly */
+    margin: 0 auto; /* Optional: Center the image horizontally */
+  }
+</style>

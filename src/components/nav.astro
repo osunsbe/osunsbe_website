@@ -1,19 +1,11 @@
 ---
 import Container from "./container.astro";
 import Link from "./ui/link.astro";
-import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import { Astronav, MenuItems, MenuIcon, StickyHeader } from "astro-navbar";
+import Logo from "../assets/otherImgs/logo.svg";
+import Image from "astro/components/Image.astro";
 
 const menuitems = [
-    {
-        title: "Features",
-        path: "#",
-        children: [
-            { title: "Action", path: "/" },
-            { title: "Another action", path: "#" },
-            { title: "Dropdown Submenu", path: "#" },
-            { title: "404 Page", path: "/404" },
-        ],
-    },
     {
         title: "About Us",
         path: "/about",
@@ -23,49 +15,68 @@ const menuitems = [
         path: "/board",
     },
     {
+        title: "Events",
+        path: "/events",
+    },
+    {
+        title: "Alumni",
+        path: "/alumni",
+    },
+    {
         title: "Sponsor",
         path: "/sponsor",
     },
 ];
 ---
 
-<Container>
-    <header class="flex flex-col lg:flex-row justify-between items-center my-5">
-        <Astronav>
-            <div class="flex w-full lg:w-auto items-center justify-between">
-                <a href="/" class="text-lg"
-                    ><span class="font-bold text-slate-800">Oregon State</span
-                    ><span class="text-slate-500">NSBE</span>
-                </a>
-                <div class="block lg:hidden">
-                    <MenuIcon class="w-4 h-4 text-gray-800" />
-                </div>
-            </div>
-            <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-                <ul class="flex lg:flex-row lg:gap-4">
-                    {
-                        menuitems.map((item, index) => (
-                            <>
-                                {!item.children && (
-                                    <li>
-                                        <a
-                                            href={item.path}
-                                            class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900"
-                                        >
-                                            <span> {item.title}</span>
-                                        </a>
-                                    </li>
-                                )}
-                            </>
-                        ))
-                    }
-                    <div>
-                        <div class="hidden lg:flex items-center gap-4">
-                            <Link href="/contact" size="md">Contact Us</Link>
-                        </div>
+<StickyHeader
+    class="sticky top-0 border-b z-50 transition-all"
+    scrollY={40}
+    defaultClass="py-5 border-transparent"
+    activeClass="py-2 bg-white/80 border-gray-200 backdrop-blur-lg"
+>
+    <Container>
+        <header class="flex flex-col lg:flex-row justify-between items-center">
+            <Astronav>
+                <div class="flex w-full lg:w-auto items-center justify-between">
+                    <a href="/" class="">
+                        <Image
+                            src={Logo}
+                            alt="Oregon State NSBE"
+                            loading="lazy"
+                            width={250}
+                        />
+                    </a>
+                    <div class="block lg:hidden">
+                        <MenuIcon class="w-4 h-4 text-gray-800" />
                     </div>
-                </ul>
-            </MenuItems>
-        </Astronav>
-    </header>
-</Container>
+                </div>
+                <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
+                    <ul class="flex flex-col lg:flex-row lg:gap-4">
+                        {
+                            menuitems.map((item, index) => (
+                                <li>
+                                    <a
+                                        href={item.path}
+                                        class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900"
+                                    >
+                                        <span> {item.title}</span>
+                                    </a>
+                                </li>
+                            ))
+                        }
+                        <div>
+                            <div class="hidden lg:flex items-center gap-4">
+                                <Link href="/contact" size="md">Contact Us</Link
+                                >
+                            </div>
+                        </div>
+                    </ul>
+                    <div class="lg:hidden flex items-center mt-3 gap-4">
+                        <Link href="/contact" size="md" block>Contact Us</Link>
+                    </div>
+                </MenuItems>
+            </Astronav>
+        </header>
+    </Container>
+</StickyHeader>

@@ -1,4 +1,6 @@
 ---
+import Container from "../components/container.astro";
+import BoardCards from "../components/execBoard/boardCards.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
 
@@ -7,5 +9,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     seoTitle="Oregon State NSBE Officers"
     seoDesc="NSBE Officers for the 2024-2025 Year"
 >
-    <h1>Officer Page</h1>
+    <Container>
+        <BoardCards />
+    </Container>
 </MainLayout>
