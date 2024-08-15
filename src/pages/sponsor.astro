@@ -1,6 +1,8 @@
 ---
 import Container from "../components/container.astro";
 import MainLayout from "../layouts/MainLayout.astro";
+import Title from "../components/sponsorcomp/title.astro";
+import Pricing from "../components/sponsorcomp/pricing.astro";
 ---
 
 <MainLayout
@@ -9,5 +11,7 @@ import MainLayout from "../layouts/MainLayout.astro";
     seoDesc="Discover sponsorship opportunities with the Oregon State Chapter of the National Society of Black Engineers (NSBE). Support diversity in engineering and innovation."
 >
     <Container>
+        <Title />
+        <Pricing />
     </Container>
 </MainLayout>
