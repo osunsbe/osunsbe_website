@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import Tai from "../../assets/officerImgs/TaisPhoto.png";
+---
+
+<div
+  class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
+>
+  <div class="w-4/5 mx-auto text-center mb-10 md:mx-auto md:mb-12">
+    <h2 class="tracking-tight text-2xl md:text-4xl lg:text-6xl">
+      Celebrating Our Trailblazers: Notable Alumni
+    </h2>
+  </div>
+  <div class="w-5/6 mx-auto text-center mb-10 md:mx-auto md:mb-12">
+    <p class="tracking-tight text-m md:text-l lg:text-xl">
+      Our alumni are the foundation of Oregon State NSBE, paving the way with
+      their achievements and leadership. This page honors those who have made
+      significant contributions by highlighting where they are at now and how
+      OSU NSBE has impacted them. Discover where our most notable alumni have
+      advanced in their careers.
+    </p>
+  </div>
+  <div class="grid px-8 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div>
+      <div
+        class="relative overflow-hidden transition duration-300 transform rounded shadow-lg lg:hover:-translate-y-2 hover:shadow-2xl"
+      >
+        <Image
+          src={Tai}
+          alt="Tai"
+          class="object-cover w-full h-56 md:h-64 xl:h-80"
+        />
+        <div
+          class="absolute inset-0 flex flex-col justify-center px-5 py-4 text-center transition-opacity duration-300 bg-black bg-opacity-75 opacity-0 hover:opacity-100"
+        >
+          <p class="mb-1 text-lg font-bold text-gray-100">Tai-Renée King</p>
+          <p class="mb-4 text-xs text-gray-100">President</p>
+          <p class="mb-4 text-xs text-gray-100">
+            Natural Resources with Minor in Humanitarian Engineering
+          </p>
+          <p class="mb-4 text-xs tracking-wide text-gray-400">
+            I love roller skating, video games, and learning new things.
+          </p>
+          <div class="flex items-center justify-center space-x-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

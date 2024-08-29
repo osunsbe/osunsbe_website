@@ -1,10 +1,8 @@
 ---
 import Container from "./container.astro";
-import Link from "./ui/link.astro";
 import { Astronav, MenuItems, MenuIcon, StickyHeader } from "astro-navbar";
 import Logo from "../assets/otherImgs/logo.svg";
 import Image from "astro/components/Image.astro";
-import Modal from "./contact/modal.astro";
 
 const menuitems = [
     {
@@ -20,12 +18,17 @@ const menuitems = [
         path: "/events",
     },
     {
+        title: "Alumni",
+        path: "/alumni"
+    },
+    {
         title: "Sponsor",
         path: "/sponsor",
     },
     {
         title: "Contact Us",
-        path: "#bottom-of-page"
+        path: "#bottom-of-page",
+        class: "flex bg-black text-white py-2 px-4 rounded hover:bg-gray-800 mr-8"
     }
 ];
 ---
@@ -53,13 +56,13 @@ const menuitems = [
                     </div>
                 </div>
                 <MenuItems class="hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0">
-                    <ul class="flex flex-col lg:flex-row lg:gap-4">
+                    <ul class="flex flex-col lg:flex-row lg:gap-1">
                         {
                             menuitems.map((item, index) => (
                                 <li>
                                     <a
                                         href={item.path}
-                                        class="flex lg:px-3 py-2 items-center text-gray-600 hover:text-gray-900"
+                                        class={`flex items-center justify-center py-2 px-4 ${item.class || "text-gray-600 hover:text-gray-900"}`}
                                     >
                                         <span> {item.title}</span>
                                     </a>
