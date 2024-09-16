@@ -1,6 +1,7 @@
 ---
 import MainHead from "./MainHead.astro";
 import Nav from "../components/nav.astro";
+import Footer from "../components/footer.astro";
 const { title, seoTitle, seoDesc } = Astro.props;
 ---
 
@@ -16,5 +17,6 @@ const { title, seoTitle, seoDesc } = Astro.props;
             }
         </style>
         <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+        <Footer />
     </body>
 </html>
