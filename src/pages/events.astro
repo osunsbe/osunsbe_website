@@ -2,6 +2,7 @@
 import Container from "../components/container.astro";
 import MainLayout from "../layouts/MainLayout.astro";
 import EventTypes from "../components/eventspage/eventTypes.astro";
+import Slider from "../components/eventspage/images.astro";
 ---
 
 <MainLayout
@@ -10,6 +11,7 @@ import EventTypes from "../components/eventspage/eventTypes.astro";
     seoDesc=" Explore the diverse events hosted by the Oregon State University NSBE Chapter, including professional development workshops, networking sessions, community service projects, and social gatherings."
 >
     <Container>
+        <Slider />
         <EventTypes />
     </Container>
 </MainLayout>

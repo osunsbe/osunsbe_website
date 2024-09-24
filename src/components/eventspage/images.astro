@@ -1,0 +1,96 @@
+---
+import Image from 'astro/components/Image.astro'
+import General1 from '../../assets/eventslider/general1.jpg'
+import Frc2 from '../../assets/eventslider/frc2.jpg'
+import Frc3 from '../../assets/eventslider/frc3.jpg'
+import Nat3 from '../../assets/eventslider/nat3.jpg'
+import Summit5 from '../../assets/eventslider/summit5.jpg'
+import Summit4 from '../../assets/eventslider/summit4.jpg'
+import Nat4 from '../../assets/eventslider/nat4.jpg'
+import General2 from '../../assets/eventslider/general2.jpg'
+import Zstairs from '../../assets/otherImgs/zs_stairs.jpg'
+---
+
+
+<section class="py-8">
+    <div class="container mx-auto text-center">
+        <h2 class="text-5xl font-bold mb-4">Welcome to Our Events Page</h2>
+        <p class="text-lg">
+            Here you can find information about the various events held by the
+            Oregon State NSBE Chapter. Join us in our general meetings,
+            volunteering events, conferences, and summits!
+        </p>
+    </div>
+</section>
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div class="grid gap-4">
+        <div>
+            <Image
+                src={General1}
+                alt="General Body Meeting"
+                class="h-auto max-w-full rounded-lg"
+            />
+        </div>
+        <div>
+            <Image
+                src={Frc2}
+                alt="FRC Avari"
+                class="h-auto max-w-full rounded-lg"
+            />
+        </div>
+        <div>
+            <Image
+                src={Frc3}
+                alt="FRC Career Fair"
+                class="h-auto max-w-full rounded-lg"
+            />
+        </div>
+    </div>
+    <div class="grid gap-4">
+        <div>
+            <Image
+                src={Nat3}
+                alt="Nationals Career Fair"
+                class="h-auto max-w-full rounded-lg"
+            />
+        </div>
+        <div>
+            <Image
+                src={Summit5}
+                alt="Zone Summit Group Photo"
+                class="h-auto max-w-full rounded-lg"
+            />
+        </div>
+        <div>
+            <Image
+                src={Summit4}
+                alt="Zone Summit Group Photo"
+                class="h-auto max-w-full rounded-lg"
+            />
+        </div>
+    </div>
+    <div class="grid gap-4">
+        <div>
+            <Image
+                src={Nat4}
+                alt="Hazi Nationals"
+                class="h-auto max-w-full rounded-lg"
+            />
+        </div>
+        <div>
+            <Image
+                src={General2}
+                alt="General meeting 2"
+                class="h-auto max-w-full rounded-lg"
+            />
+        </div>
+        <div>
+            <Image
+                src={Zstairs}
+                alt="Zone summit stairs group photo"
+                class="h-auto max-w-full rounded-lg"
+            />
+        </div>
+    </div>
+</div>
