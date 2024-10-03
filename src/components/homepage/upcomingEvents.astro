@@ -1,31 +1,53 @@
 ---
 import Image from "astro/components/Image.astro";
 import Flyer from "../../assets/eventFlyers/stdyhall.png";
+import Week1 from "../../assets/eventFlyers/week1.png"
 ---
 
 <div
     class="bg-black p-8 mt-20 mx-auto max-w-screen rounded-lg grid md:grid-col-2 lg:grid-cols-2 place-items-center"
 >
     <div>
-        <h2 class="text-white text-4xl md:text-6xl tracking-tight">
+        <h2 class="text-bold text-white text-3xl md:text-5xl tracking-tight">
             Upcoming Events
         </h2>
-        <p class="text-white text-xl md:text-2xl tracking-tight">
+        <br>
+        <p class="text-semibold text-white text-l md:text-xl tracking-tight">
+            Emotional Intelligence Workshop
+            <br />
+            Thursday October 3rd, 2024 @5pm
+            <br />
+            @Lonnie B. Harris Black Cultural Center
+            <br />
+        </p>
+        <p class="text-medium text-white tracking-tight text-left">
+            In this workshop we will be exploring the topic of emotional intelligence <br>and how 
+            emotional intelligence can help you within all means of life, including <br>academically, 
+            professionally, etc. 
+        </p>
+    </div>
+    <div class="flex my-5">
+        <Image src={Week1} alt="Emotional Intelligence Workshop" class="w-72 h-auto"/>
+    </div>
+
+    <div>
+        <p class="text-semibold text-white text-l md:text-xl tracking-tight">
             Study Hall
             <br />
             Fridays 5:00pm - 6:30pm
             <br />
+            @Griggs Center in the Memorial Union
             <br />
         </p>
-        <p class="text-white tracking-tight text-left">
-            Join us at the NSBE Study Hall for a focused, collaborative environment
-            to connect with peers and excel in your studies. Maximize your productivity
+        <p class="text-medium text-white tracking-tight text-left">
+            Join us at the NSBE Study Hall for a focused, collaborative environment <br>
+            to connect with peers and excel in your studies. Maximize your productivity <br>
             and achieve your academic goals with us!
         </p>
     </div>
-
-    <div class="flex mt-5">
-        <Image src={Flyer} alt="Study Hall" />
+    <div class="flex my-5">
+        <Image src={Flyer} alt="Study Hall" class="w-72 h-auto"/>
     </div>
+    
 </div>
 <div class="p-16"></div>
